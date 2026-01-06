@@ -1,0 +1,175 @@
+@keyframes pulse-pop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.16); }
+  100% { transform: scale(1); }
+}
+
+.pulse-pop {
+  animation: pulse-pop 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+
+@keyframes jump-settle {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-8px); }   /* jump up */
+  60%  { transform: translateY(1px); }    /* slight over-settle */
+  100% { transform: translateY(0); }      /* rest */
+}
+
+.jump-settle {
+  animation: jump-settle 450ms cubic-bezier(.33,1.3,.66,1) 1;
+  will-change: transform;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-up{
+   animation: slide-up 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+
+@keyframes enter-right{
+  0%{
+    transform: translateX(-50px);
+    opacity: 0;
+  }100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes enter-left{
+  0%{
+    transform: translateX(50px);
+    opacity: 0;
+  }100%{
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes exit-left{
+  0%{
+    transform: translateX(0px);
+    opacity: 0;
+  }100%{
+    transform: translateX(-50px);
+    opacity: 1;
+  }
+}
+
+@keyframes exit-right{
+  0%{
+    transform: translateX(0px);
+    opacity: 0;
+  }100%{
+    transform: translateX(50px);
+    opacity: 1;
+  }
+}
+
+@keyframes exit-up{
+  0%{
+    transform: translateY(0px);
+    opacity: 1;
+  }100%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes enter-down{
+  0%{
+    transform: translateY(-50px);
+    opacity: 0;
+  }100%{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes pop-down-setting-modal {
+  
+  to{
+    transform:  translateY(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes pop-up-setting-modal {
+   from {
+    transform: translateY(100%);
+   }
+}
+
+@keyframes animateText {
+   from{
+    opacity: 0;
+    transform: translateY(10px);
+   }to{
+     opacity: 1;
+     transform: translateY(0px);
+   }
+}
+.animate-text{
+   display: inline-block;
+  animation: animateText  180ms ease-out;
+  
+}
+.exit-setting-modal{
+   animation: pop-down-setting-modal 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.enter-setting-modal{
+   animation: pop-up-setting-modal 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+
+
+.enter-right{
+   animation: enter-right 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.enter-left{
+   animation: enter-left 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.exit-right{
+   animation: exit-right 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.exit-left{
+   animation: exit-left 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.exit-up{
+   animation: exit-up 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+.enter-down{
+   animation: enter-down 420ms cubic-bezier(.2,1,.3,1) 1;
+  will-change: transform;
+}
+
+
+@keyframes to-left {
+  to{
+
+  }
+}
+.toLeft{
+  animation: to-left 420ms cubic-bezier(.2,1,.3,1) 1;
+}
+  
+
+

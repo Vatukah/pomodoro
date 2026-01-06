@@ -1,0 +1,79 @@
+.btn {
+  --btn-bg:transparent;
+  width: fit-content;
+  color: inherit;
+  outline: unset;
+  border: unset;
+  cursor: pointer;
+  background: var(--btn-bg);
+  transition: background-color 220ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  white-space: nowrap;
+  font-weight: inherit;
+  
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  border-radius: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem; 
+  user-select: none;
+}
+.btn:hover {
+  background-color: hsl(from var(--text) h s l / 10%);
+}
+
+.btn:disabled{
+  cursor: not-allowed;
+}
+.btn:active{
+
+  scale: 0.975;
+}
+
+.btn.is-active {
+  background-color: var(--accent);
+}
+.btn-small{
+  padding: var(--space-xs);
+  font-size: var(--space-sm);
+}
+.btn_text{
+  display: none;
+}
+
+.btn-hero{
+ --btn-bg:var(--accent);
+}
+
+.btn-theme {
+  font-size: medium;
+  font-weight: 300;
+  color: hsl(from var(--text) h s 40%);
+}
+
+.btn-theme.is-active {
+  background-color: color-mix(in oklab, var(--theme) 30%, var(--bg) 70%);
+  color: var(--theme);
+  box-shadow: 0px 0px 0px 0.55px var(--theme);
+}
+
+.btn-border {
+  border: 2px solid var(--border-color);
+}
+
+.btn-border.is-active {
+  border-color: var(--accent);
+  background-color: var(--accent-20);
+}
+
+.center-icon{
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width:768px){
+    .btn_text{
+      display: block;
+    }
+}

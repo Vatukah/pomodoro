@@ -1,0 +1,11 @@
+{
+  "ticking": {
+    "kitchen": "https://palutekkmdwjunoxpghw.supabase.co/storage/v1/object/public/sounds/clock-tick.mp3"
+    
+  },
+  "complete": {
+    "bell": "https://palutekkmdwjunoxpghw.supabase.co/storage/v1/object/public/sounds/bell.mp3",
+    "soft": "https://palutekkmdwjunoxpghw.supabase.co/storage/v1/object/public/sounds/soft.mp3",
+    "cute": "https://palutekkmdwjunoxpghw.supabase.co/storage/v1/object/public/sounds/cute.mp3"
+  }
+}
