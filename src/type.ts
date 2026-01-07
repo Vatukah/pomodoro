@@ -81,31 +81,6 @@ export interface IPomodoroContext {
 }
 
 
-export type MessageMap = {
-  INIT: { id: string | null; mode: MODE | null; duration: number };
-  START: undefined;
-  PAUSE: undefined;
-  RESUME: undefined;
-  RESET: {duration:number};
-  // timer worker event
-  tick:{remaining:number};
-  init: { duration: number };
-  complete: { id: string | null; mode: MODE | null };
-  status: { status: TimerStatus };
-}
- 
-export type PostMessagePayload<T extends keyof MessageMap> = {
-  type: T;
-  payload: MessageMap[T];
-};
-
-export type WorkerMessage = {
-  [K in keyof MessageMap]: {
-    type: K;
-    payload: MessageMap[K];
-  }
-}[keyof MessageMap];
-
 export interface ITimerForm {
   children: React.ReactNode;
   savedValue: number;

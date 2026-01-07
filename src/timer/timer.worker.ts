@@ -1,5 +1,6 @@
 // timer.worker.ts (patched resume behavior)
-import type { TimerStatus, WorkerMessage } from "../type";
+import type {  TimerStatus } from "../type";
+import type {  WorkerMessage } from "./timer.types";
 import { TimerController } from "../controller/timerController";
 
 class MyTimer extends TimerController {
@@ -26,9 +27,8 @@ class MyTimer extends TimerController {
 
 const pomodoro = new MyTimer();
 
-self.onmessage = (event: MessageEvent<WorkerMessage>) => {
-  const { type, payload } = event.data;
-  console.log(type, payload);
+self.onmessage = (message: MessageEvent<WorkerMessage>) => {
+  const {type, payload} = message.data;
   switch (type) {
     case "INIT":
       pomodoro.init(payload);

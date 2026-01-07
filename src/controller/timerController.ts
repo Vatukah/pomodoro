@@ -3,7 +3,6 @@ import type { ITimerInit, MODE, TimerStatus } from "../type";
 interface ITimercontroller {
   readonly remainingsSec: number;
   readonly mode: MODE | null;
-  readonly id : string | null;
   
   start(): void;
   reset(defaultDuration:number): void;
@@ -13,7 +12,6 @@ interface ITimercontroller {
 }
 
 export abstract class TimerController implements ITimercontroller {
-  protected  _id:string | null = null;
   protected _mode:MODE | null = null;
   protected _remainings: number = 0;
   protected _target: number = 0;
@@ -51,10 +49,8 @@ export abstract class TimerController implements ITimercontroller {
     this._remainings = intial.duration;
     this._initialremaining = intial.duration;
     this._pausedAt = 0;
-    if(intial.id && intial.mode){
-      this._id = intial.id;
-      this._mode = intial.mode;
-    }
+    this._mode = intial.mode;
+  
     this._updateStatus("idle");
     this._onInit(intial.duration);
   }
