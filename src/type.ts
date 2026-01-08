@@ -52,7 +52,6 @@ export type Settings = {
 };
 
 export interface ITimerInit {
-  id: string | null;
   mode: MODE | null;
   duration: number;
 }
